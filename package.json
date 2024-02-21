@@ -1,0 +1,21 @@
+{
+  "name": "spectral-web-page",
+  "version": "1.0.0",
+  "description": "Lint OpenAPI files in the browser with Spectral",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stoplight/spectral-core": "^1.18.3",
+    "@stoplight/spectral-functions": "^1.7.2",
+    "@stoplight/spectral-parsers": "^1.0.3",
+    "path-browserify": "^1.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAPI Linter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>OpenAPI Linter</h2>
+        <input type="file" id="fileInput" accept=".yaml,.yml,.json">
+        <textarea id="specInput" placeholder="Or paste your OpenAPI spec here..."></textarea>
+        <button id="lintButton">Lint Spec</button>
+        <textarea id="lintResults" readonly placeholder="Linting results will appear here..."></textarea>
+    </div>
+    <script src="../dist/bundle.js"></script>
+</body>
+</html>
