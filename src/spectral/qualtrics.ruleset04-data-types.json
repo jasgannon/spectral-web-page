@@ -1,0 +1,81 @@
+{
+  "formats": [
+    "oas3"
+  ],
+  "rules": {
+    "data-missing-integer-format": {
+      "message": "Format is not specified for an integer property",
+      "severity": "warn",
+      "given": "$.paths.*.*..schema..properties..[?(@.type=='integer')]",
+      "then": {
+        "field": "format",
+        "function": "defined"
+      }
+    },
+    "data-missing-number-format": {
+      "message": "Format is not specified for a number property",
+      "severity": "warn",
+      "given": "$.paths.*.*..schema..properties..[?(@.type=='number')]",
+      "then": {
+        "field": "format",
+        "function": "defined"
+      }
+    },
+    "data-incorrect-integer-format": {
+      "message": "Incorrect integer format: {{value}}. Must be one of: int32, int64",
+      "severity": "error",
+      "given": "$..[?(@.type==\"integer\")]",
+      "then": {
+        "field": "format",
+        "function": "enumeration",
+        "functionOptions": {
+          "values": [
+            "int32",
+            "int64"
+          ]
+        }
+      }
+    },
+    "data-incorrect-number-format": {
+      "message": "Incorrect integer format: {{value}}. Must be one of: float, double",
+      "severity": "error",
+      "given": "$..[?(@.type==\"number\")]",
+      "then": {
+        "field": "format",
+        "function": "enumeration",
+        "functionOptions": {
+          "values": [
+            "float",
+            "double"
+          ]
+        }
+      }
+    },
+    "data-incorrect-string-format": {
+      "message": "Incorrect integer format: {{value}}.",
+      "severity": "warn",
+      "given": "$..[?(@.type==\"string\")]",
+      "then": {
+        "field": "format",
+        "function": "enumeration",
+        "functionOptions": {
+          "values": [
+            "date-time",
+            "date",
+            "time",
+            "email",
+            "uri",
+            "uuid",
+            "base64",
+            "binary",
+            "regex",
+            "lang",
+            "country",
+            "currency",
+            "color"
+          ]
+        }
+      }
+    }
+  }
+}

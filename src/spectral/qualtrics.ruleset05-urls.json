@@ -1,0 +1,18 @@
+{
+  "formats": [
+    "oas3"
+  ],
+  "rules": {
+    "uri-no-empty-path-segments": {
+      "message": "Empty path segments are not allowed",
+      "severity": "error",
+      "given": "$.paths.*~",
+      "then": {
+        "function": "pattern",
+        "functionOptions": {
+          "notMatch": "//"
+        }
+      }
+    }
+  }
+}

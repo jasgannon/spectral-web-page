@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "spectral:oas"
+  ],
+  "formats": [
+    "oas3"
+  ],
+  "documentationUrl": "https://github.com/qualtrics/api-style-guide/blob/main/api-style-guide.md",
+  "rules": {
+    "oas3-schema": true
+  }
+}

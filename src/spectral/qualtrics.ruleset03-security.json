@@ -1,0 +1,44 @@
+{
+  "formats": [
+    "oas3"
+  ],
+  "rules": {
+    "security-https-only": {
+      "message": "Use only HTTPS in our APIs",
+      "severity": "error",
+      "given": "$.servers..url",
+      "then": {
+        "function": "pattern",
+        "functionOptions": {
+          "match": "^https://.*"
+        }
+      }
+    },
+    "security-no-http-basic": {
+      "message": "Basic authentication (with username/password) is not very secure",
+      "severity": "warn",
+      "given": "$.components.securitySchemes[*]",
+      "then": {
+        "field": "scheme",
+        "function": "pattern",
+        "functionOptions": {
+          "notMatch": "basic"
+        }
+      }
+    },
+    "security-no-secrets-in-path-or-query-parameters": {
+      "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters",
+      "severity": "error",
+      "given": [
+        "$..parameters[?(@ && @.in && @.in.match(/path/))].name",
+        "$..parameters[?(@ && @.in && @.in.match(/query/))].name"
+      ],
+      "then": {
+        "function": "pattern",
+        "functionOptions": {
+          "notMatch": "/^(client_secret|token|access_token|refresh_token|id_token|password|secret|apikey)$/i"
+        }
+      }
+    }
+  }
+}
