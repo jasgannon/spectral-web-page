@@ -67,4 +67,31 @@ async function lintSpec(spec) {
       return results.map(result => `Path: ${result.path.join('.')} - Message: ${result.message}`).join('\n');
   }
 }
+function formatLintResults(results) {
+    // Group results by path
+    const groupedResults = results.reduce((acc, result) => {
+        const path = result.path.join('.');
+        if (!acc[path]) {
+            acc[path] = [];
+        }
+        acc[path].push(result.message);
+        return acc;
+    }, {});
 
+    // Build a formatted string
+    let formattedString = '';
+    for (const [path, messages] of Object.entries(groupedResults)) {
+        formattedString += `Path: ${path}\n`;
+        messages.forEach((message, index) => {
+            formattedString += `  - Message ${index + 1}: ${message}\n`;
+        });
+        formattedString += '\n'; // Add a blank line between groups
+    }
+
+    return formattedString.trim();
+}
+
+// Assuming `results` is the array of linting results from Spectral
+const formattedResults = formatLintResults(results);
+// Display the formatted results in your output textarea
+document.getElementById('lintResults').value = formattedResults;
