@@ -1,3 +1,4 @@
+import './style.css';
 document.getElementById('lintButton').addEventListener('click', async () => {
   const fileInput = document.getElementById('fileInput');
   const specInput = document.getElementById('specInput');
