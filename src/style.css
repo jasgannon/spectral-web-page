@@ -41,18 +41,19 @@ nav ul li a {
 .container {
   display: flex;
   justify-content: space-between;
-  max-width: 900px;
+  max-width: 70em;
   margin: auto;
-  margin-top: 160px; /* Adjust based on header height */
+  margin-top: 30px; /* Adjust based on header height */
+  margin-bottom: 30px;
   background: white;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .intro {
-  max-width: 900px;
+  max-width: 70em;
   margin: auto;
-  margin-top: 300px; /* Adjust for fixed header */
+  margin-top: 30px; /* Adjust for fixed header */
   padding: 20px;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
