@@ -28,7 +28,6 @@ module.exports = {
     rules: [
       // Your existing rules...
       {
-        template: "./src/css",
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
