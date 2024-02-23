@@ -1,0 +1,15 @@
+# Section 7: JSON payload                                                                       #
+# JSON payload rules 
+
+functions:
+  - is-object-schema
+
+formats: ["oas3"]
+rules:
+
+  json-root-json-objects:
+    message: Requests and responses must be JSON objects
+    severity: error
+    given: "$.paths.*.*[responses,requestBody]..content..schema"
+    then:
+      function: is-object-schema

@@ -1,0 +1,6 @@
+# Section 12: Hypermedia 
+# Hypermedia rules
+
+formats: ["oas3"]
+rules:
+

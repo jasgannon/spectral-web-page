@@ -1,0 +1,6 @@
+# Section 16: Deprecation
+# Deprecation rules
+
+formats: ["oas3"]
+rules:
+

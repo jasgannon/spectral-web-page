@@ -1,0 +1,7 @@
+# Section 15: Compatibility & versioning 
+# Versioning rules 
+
+formats: ["oas3"]
+rules:
+
+

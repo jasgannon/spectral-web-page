@@ -1,0 +1,6 @@
+# Section 11: Webhooks
+# Webhook rules
+
+formats: ["oas3"]
+rules:
+

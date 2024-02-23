@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>OpenAPI Linter</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <div class="header-container">
+            <a href="./index.html"><img src="./logo.jpg" alt="Logo"
+                    style="height: 43px; width: 150px; margin: 10px;"></a>
+            <nav>
+                <ul>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#openapi">OpenAPI</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
-        <h2>OpenAPI Linter</h2>
-        <input type="file" id="fileInput" accept=".yaml,.yml,.json">
-        <textarea id="specInput" placeholder="Or paste your OpenAPI spec here..."></textarea>
-        <button id="lintButton">Lint Spec</button>
-        <textarea id="lintResults" readonly placeholder="Linting results will appear here..."></textarea>
+        <div>
+            <h2>Qualtrics Custom OAS Linter</h2>
+        </div>
+        <div>
+            <p>Use this linter to validate your OpenAPI specification (OAS).</p>This tool extends the <a href="https://github.com/stoplightio/spectral">Spectral linter</a> with custom rulesets specific to Qualtrics public APIs.</p><p>See the <a href="/rules">Rules</a> page for more information on the linter and the custom rulesets.</p><hr>
+               <h4>Linting your document:</h4><p><strong>Option 1</strong>: Upload your OAS in <code>.json</code>, <code>.yml</code>, or<code>.yaml</code> format.</p> <div>
+                <input type="file" id="fileInput" accept=".yaml,.yml,.json">
+            </div><p><strong>Option 2</strong> Paste the contents of your OAS file in the text area.</p>
+        </div>
+        <textarea id="specInput" placeholder="Paste your OpenAPI spec here..."></textarea>
+        <div><p>Select <strong>Lint Spec</strong> to lint your file.
+            The results are displayed in the lower text area.</p><button id="lintButton">Lint Spec</button></div>
+        <textarea id="lintResults" readonly placeholder="Linting results displayed here ..."></textarea>
     </div>
+    <footer>
+        <p>Qualtrics &copy; 2024</p>
+    </footer>
     <script type="module" src="bundle.js"></script>
 </body>
+
 </html>
