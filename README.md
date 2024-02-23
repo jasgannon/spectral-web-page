@@ -51,6 +51,7 @@ http-server ./dist
 
 Visit the URL provided by `http-server` to access the application.
 
+
 ## Using the Application
 
 To lint an OpenAPI specification:
