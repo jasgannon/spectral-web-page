@@ -1,0 +1,14 @@
+# Section 6: REST & Resources
+# REST & Resources rules
+
+formats: ["oas3"]
+rules:
+
+  qualtrics-rest-limited-resource-levels:
+    message: We want to have a limited number of sub-resource levels
+    severity: warn
+    given: "$.paths.*~"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^/[^/]*((/{[^}]*})*/[^/]*(/{[^}]*})*){0,3}/?$"

@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   mode: 'production',
+  cache: false,
   // Add this to handle the `fs` and `path` modules
   resolve: {
     fallback: {
@@ -27,6 +28,7 @@ module.exports = {
     rules: [
       // Your existing rules...
       {
+        template: "./src/css",
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },

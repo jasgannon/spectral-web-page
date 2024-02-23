@@ -1,0 +1,25 @@
+extends: 
+  - spectral:oas
+  - ./qualtrics.openapi-structure.yaml
+  - ./qualtrics.ruleset01-general.yaml
+  - ./qualtrics.ruleset02-language.yaml
+  - qualtrics.ruleset03-security.yaml
+  - qualtrics.ruleset04-data-types.yaml
+  - qualtrics.ruleset05-urls.yaml
+  - qualtrics.ruleset06-rest.yaml
+  - qualtrics.ruleset07-json.yaml
+  - qualtrics.ruleset08-requests.yaml
+  - qualtrics.ruleset09-responses.yaml
+  - qualtrics.ruleset10-headers.yaml
+  - qualtrics.ruleset11-webhooks
+  - qualtrics.ruleset12-hypermedia
+  - qualtrics.ruleset13-performance
+  - qualtrics.ruleset14-pagination
+  - qualtrics.ruleset15-versioning
+  - qualtrics.ruleset16-deprecation
+
+documentationUrl: https://github.com/qualtrics/api-style-guide/blob/main/api-style-guide.md
+
+rules:
+  # https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md#oas3-schema
+  oas3-schema: true

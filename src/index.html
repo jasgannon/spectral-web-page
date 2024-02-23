@@ -6,13 +6,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>OpenAPI Linter</h2>
-        <input type="file" id="fileInput" accept=".yaml,.yml,.json">
-        <textarea id="specInput" placeholder="Or paste your OpenAPI spec here..."></textarea>
-        <button id="lintButton">Lint Spec</button>
-        <textarea id="lintResults" readonly placeholder="Linting results will appear here..."></textarea>
+    <header>
+        <div class="header-container">
+            <a href="./index.html"><img src="./images/logo.png" alt="Logo" style="height: 150px; width: 50px; margin: 10px;"></a>
+            <nav>
+                <ul>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#openapi">OpenAPI</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="intro">
+        <p>This tool allows you to lint your OpenAPI specifications. Upload a file or paste your spec in the text area.</p>
     </div>
+    <div class="container">
+        <div class="left-column">
+            <input type="file" id="fileInput" accept=".yaml,.yml,.json">
+            <textarea id="specInput" placeholder="Or paste your OpenAPI spec here..."></textarea>
+        </div>
+        <div class="right-column">
+            <textarea id="lintResults" readonly placeholder="Linting results will appear here..."></textarea>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
     <script type="module" src="bundle.js"></script>
 </body>
 </html>

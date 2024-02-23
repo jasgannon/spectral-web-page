@@ -1,0 +1,17 @@
+# Section 8: HTTP requests
+# HTTP request rules 
+
+formats: ["oas3"]
+rules:
+
+  qualtrics-requests-no-patch-method:
+    description: Use of the PATCH method is highly discouraged.
+    message: Use of the PATCH method is highly discouraged.
+    severity: error
+    given: $.paths.*.*
+    then:
+      field: "@key"
+      function: pattern
+      functionOptions:
+        notMatch: "^patch$"
+

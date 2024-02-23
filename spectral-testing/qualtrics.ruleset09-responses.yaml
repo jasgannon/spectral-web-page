@@ -1,0 +1,6 @@
+# Section 9: HTTP responses
+# HTTP response rules
+
+formats: ["oas3"]
+rules:
+
