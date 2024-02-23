@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OpenAPI Linter</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
     <script src="../public/htmx.min.js"></script>
 </head>
@@ -12,8 +12,8 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="./index.html"><img src="../public/logo.jpg" alt="Logo"
-                    style="height: 43px; width: 150px; margin: 10px;"></a>
+            <a href="./index.html"><img src="./logo.jpg" alt="Logo"
+                    style="height: 43px; width: 150px; margin: 20px;"></a>
             <nav>
                 <ul>
                     <li><a href="#rules">Rules</a></li>
@@ -35,7 +35,7 @@
         </div>
         <textarea id="specInput" placeholder="Paste your OpenAPI spec here..."></textarea>
         <div><p>Select <strong>Lint Spec</strong> to lint your file.
-            The results are displayed in the lower text area.</p><button id="lintButton">Lint Spec</button></div>
+            The results are displayed in the text area.</p><button id="lintButton">Lint Spec</button></div>
         <textarea id="lintResults" readonly placeholder="Linting results displayed here ..."></textarea>
     </div>
     <footer>

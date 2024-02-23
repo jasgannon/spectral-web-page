@@ -39,37 +39,21 @@ nav ul li {
   margin: 0 10px;
 }
 
-nav ul li a {
+a {
   text-decoration: none;
   color: #007bff;
 }
 
-.intro {
-  max-width: 65em;
-  margin-top: 50px;
-  margin-right: auto;
-  margin-left: auto; /* Adjusted top margin */
-  padding: 20px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+a:hover {
+  color: #7fbaf9;
 }
 
-.action-container {
-  max-width: 15em;
-  margin: 50px auto 0; /* Adjusted top margin */
-  padding: 20px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;/* For action-container */
-  align-items: flex-start;
-}
 .container {
   max-width: 65em;
-  margin: 50px auto; /* Adjusted top margin and added bottom margin */
+  margin-top: 5em;
+  margin-bottom: 10em;
+  margin-left: auto;
+  margin-right: auto; /* Adjusted top margin and added bottom margin */
   background: white;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -82,7 +66,6 @@ textarea {
   color: white;
   font-family: "Lucida Console", Courier, monospace;
   width: 100%;
-  height: 300px;
   margin: 20px 0; /* Added margin for spacing */
   padding: 10px;
   border: 1px solid #ddd;
@@ -90,14 +73,26 @@ textarea {
   resize: vertical;
 }
 
+#specInput {
+  height: 10em;
+}
+
+#lintResults {
+  height: 20em;
+}
+
 footer {
-  background-color: #EDF2F4;
+  background-color: #ffffff;
   color: black;
   text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 10px 0;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 4em;
 }
 
 #lintButton {
@@ -133,7 +128,5 @@ code {
       flex-direction: column;
   }
 
-  .intro, .action-container {
-      margin-top: 210px; /* Adjust for smaller header */
-  }
+
 }
