@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>OpenAPI Linter</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <div class="header-container">
-            <a href="./index.html"><img src="./images/logo.png" alt="Logo"
-                    style="height: 150px; width: 50px; margin: 10px;"></a>
+            <a href="./index.html"><img src="./logo.jpg" alt="Logo" style="height: 150px; width: 43px; margin: 10px;"></a>
             <nav>
                 <ul>
                     <li><a href="#rules">Rules</a></li>
@@ -22,22 +19,19 @@
         </div>
     </header>
     <div class="intro">
-        <p>This tool allows you to lint your OpenAPI specifications. Upload a file or paste your spec in the text area.
-        </p>
+        <p>This tool allows you to lint your OpenAPI specifications. Upload a file or paste your spec in the text area.</p>
+    </div>
+    <div class="action-container">
+        <input type="file" id="fileInput" accept=".yaml,.yml,.json">
+        <button id="lintButton">Lint Spec</button>
     </div>
     <div class="container">
-        <div class="left-column">
-            <input type="file" id="fileInput" accept=".yaml,.yml,.json">
-            <textarea id="specInput" placeholder="Or paste your OpenAPI spec here..."></textarea>
-        </div>
-        <div class="right-column">
-            <textarea id="lintResults" readonly placeholder="Linting results will appear here..."></textarea>
-        </div>
+        <textarea id="specInput" placeholder="Or paste your OpenAPI spec here..."></textarea>
+        <textarea id="lintResults" readonly placeholder="Linting results will appear here..."></textarea>
     </div>
     <footer>
         <p>&copy; 2024</p>
     </footer>
     <script type="module" src="bundle.js"></script>
 </body>
-
 </html>
