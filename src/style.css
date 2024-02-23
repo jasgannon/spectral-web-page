@@ -20,10 +20,11 @@ nav {
 }
 
 .header-container {
-  max-width: 900px;
+  max-width: 65em;
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -43,19 +44,31 @@ nav ul li a {
   color: #007bff;
 }
 
-.intro, .action-container {
-  max-width: 900px;
+.intro {
+  max-width: 65em;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto; /* Adjusted top margin */
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.action-container {
+  max-width: 15em;
   margin: 50px auto 0; /* Adjusted top margin */
   padding: 20px;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between; /* For action-container */
-  align-items: center;
+  flex-direction: column;/* For action-container */
+  align-items: flex-start;
 }
-
 .container {
-  max-width: 900px;
+  max-width: 65em;
   margin: 50px auto; /* Adjusted top margin and added bottom margin */
   background: white;
   padding: 20px;
@@ -78,14 +91,42 @@ textarea {
 }
 
 footer {
-  background-color: black;
-  color: white;
+  background-color: #EDF2F4;
+  color: black;
   text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
   padding: 10px 0;
 }
+
+#lintButton {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #555555;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#lintButton:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
 
 @media (max-width: 768px) {
   .intro, .action-container, .container {

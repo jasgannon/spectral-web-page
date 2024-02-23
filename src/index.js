@@ -18,8 +18,7 @@ document.getElementById('lintButton').addEventListener('click', async () => {
   }
 
   try {
-      // Assuming `lintSpec` is a function you will define to lint the OpenAPI spec
-      // You need to handle converting the spec string to a format Spectral can lint (if necessary) and then run Spectral
+      // Converting spec string to a format Spectral can lint (if necessary) and then run Spectral
       const results = await lintSpec(spec);
       lintResults.value = JSON.stringify(results, null, 2);
   } catch (error) {
@@ -28,7 +27,7 @@ document.getElementById('lintButton').addEventListener('click', async () => {
 });
 
 async function lintSpec(spec) {
-  // Import Spectral classes and functions. These imports assume that Spectral has been bundled with your application.
+  // Import Spectral classes and functions
   const { Spectral, Document } = require('@stoplight/spectral-core');
   const Parsers = require('@stoplight/spectral-parsers');
   const { oas } = require('@stoplight/spectral-rulesets');
@@ -36,7 +35,7 @@ async function lintSpec(spec) {
   // Initialize Spectral
   const spectral = new Spectral();
 
-  // Attempt to parse the spec string as JSON. If that fails, parse it as YAML.
+  // Attempt to parse the spec string as JSON. If that fails, parse it as YAML
   let parsedSpec;
   try {
       parsedSpec = JSON.parse(spec);
@@ -48,11 +47,10 @@ async function lintSpec(spec) {
       }
   }
 
-  // Create a Spectral Document from the parsed spec. Assume the spec is OpenAPI for this example.
+  // Create a Document from the parsed spec
   const document = new Document(spec, Parsers.Yaml, 'spec.yaml');
 
-  // Load a ruleset. Here, we're directly setting rules for demonstration.
-  // In a real application, you might load an external ruleset file.
+  // Load a ruleset
   await spectral.setRuleset({
       extends: [oas],
       rules: {},
@@ -92,7 +90,7 @@ function formatLintResults(results) {
     return formattedString.trim();
 }
 
-// Assuming `results` is the array of linting results from Spectral
+// results is the array of linting results from Spectral
 const formattedResults = formatLintResults(results);
 // Display the formatted results in your output textarea
 document.getElementById('lintResults').value = formattedResults;
